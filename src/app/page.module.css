@@ -142,6 +142,8 @@
   border-radius: 50%;
   padding: 4px;
   animation: profileGlow 3s ease-in-out infinite alternate;
+  display: block;
+  margin: 0 auto;
 }
 
 .dark .profileImageWrapper {
@@ -422,21 +424,65 @@
     height: 28px;
   }
 
+  .profileContainer {
+    margin-bottom: 2.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
   .profileImageWrapper {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .main {
+    padding: 2rem 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.8rem;
   }
 }
 
 @media (max-width: 480px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .profileContainer {
+    margin-bottom: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .profileImageWrapper {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+  }
+
   .name {
     font-size: 1.8rem;
     font-family: 'Raleway', sans-serif;
+    margin-bottom: 1rem;
   }
 
   .title {
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .bio {
+    margin-bottom: 2rem;
   }
 
   .links {
@@ -445,10 +491,40 @@
 
   .quote {
     padding: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .main {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .profileContainer {
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .profileImageWrapper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
   }
 }
