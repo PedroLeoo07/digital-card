@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Landing Page Profissional - Leonardo Oliveira
 
-## Getting Started
+Uma landing page moderna e responsiva desenvolvida com Next.js, apresentando um design elegante com modo claro/escuro e animações sutis.
 
-First, run the development server:
+## 📋 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Esta landing page foi criada para apresentar meu perfil profissional como Full Stack Developer, combinando design moderno, performance otimizada e uma experiência de usuário excepcional.
+
+### ✨ Características Principais
+
+- **🎨 Design Moderno**: Interface limpa com esquema de cores preto e vermelho
+- **🌓 Modo Claro/Escuro**: Toggle entre temas com transições suaves
+- **📱 Responsivo**: Adaptado para desktop, tablet e mobile
+- **🎭 Animações Sutis**: Efeitos visuais elegantes sem exageros
+- **⚡ Performance**: Otimizado com Next.js 15 e Turbopack
+- **🎯 Acessibilidade**: Seguindo as melhores práticas de UX/UI
+
+### 🛠️ Tecnologias Utilizadas
+
+- **Next.js 15**: Framework React com Turbopack
+- **React 18**: Biblioteca JavaScript para interfaces
+- **CSS Modules**: Estilização componentizada e isolada
+- **Google Fonts**: Tipografia profissional (Raleway + Open Sans)
+- **JavaScript ES6+**: Funcionalidades modernas do JavaScript
+
+## 🎯 Funcionalidades
+
+### 📸 Seção de Perfil
+- Foto de perfil circular com efeito gradiente animado
+- Nome em destaque com cor vermelha e sombra sutil
+- Subtítulo profissional elegante
+
+### 📝 Apresentação
+- Mini biografia profissional
+- Frase de impacto personalizada
+- Design clean e legível
+
+### 🔗 Links Principais
+- **Portfólio**: Acesso aos projetos
+- **LinkedIn**: Rede profissional  
+- **GitHub**: Repositórios de código
+- **Contato**: Canal de comunicação
+
+### 🎨 Sistema de Temas
+- **Modo Escuro**: Gradiente preto com detalhes vermelhos
+- **Modo Claro**: Gradiente claro com acentos vermelhos
+- **Persistência**: Salva preferência no localStorage
+- **Detecção Automática**: Respeita preferência do sistema
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm, yarn, pnpm ou bun
+
+### Instalação
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/PedroLeoo07/portfolio-mobile.git
+   cd landing-page
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Execute o servidor de desenvolvimento**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+4. **Acesse no navegador**
+   ```
+   http://localhost:3000
+   ```
+
+
+## 🎨 Customização
+
+### Alterando Informações Pessoais
+Edite o arquivo `src/app/page.jsx`:
+- Nome e título profissional
+- Biografia e frase de impacto  
+- Links para redes sociais
+
+### Modificando Cores
+Ajuste as variáveis CSS em `src/app/page.module.css`:
+```css
+--primary-color: #dc2626;      /* Cor principal (vermelho) */
+--primary-hover: #b91c1c;      /* Hover da cor principal */
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Adicionando Sua Foto
+1. Adicione sua foto como `profile.jpg` na pasta `public/`
+2. Recomendado: formato quadrado, mínimo 300x300px
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 Build para Produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Criar build otimizado
+npm run build
 
-## Learn More
+# Iniciar servidor de produção
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (Recomendado)
+1. Conecte seu repositório no [Vercel](https://vercel.com)
+2. Deploy automático a cada push na branch main
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Outras Plataformas
+- **Netlify**: Conecte o repositório GitHub
+- **Heroku**: Use buildpack para Next.js
+- **AWS Amplify**: Deploy contínuo via Git
 
-## Deploy on Vercel
+## 🤝 Contribuição
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contribuições são bem-vindas! Para contribuir:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add: AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## 👨‍💻 Autor
+
+**Leonardo Oliveira**
+- LinkedIn: [Leonardo Oliveira](https://linkedin.com/in/leonardo)
+- GitHub: [@PedroLeoo07](https://github.com/PedroLeoo07)
+- Email: leonardo@example.com
+
+---
+
+⭐ **Se este projeto te ajudou, considere dar uma estrela no repositório!**
