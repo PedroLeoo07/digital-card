@@ -80,7 +80,7 @@ export default function Home() {
         {/* Links principais */}
         <div className={styles.links}>
           <a 
-            href="https://lab-oliveira-leo.vercel.app/" 
+            href="https://dev-leonardo-portfolio.vercel.app/" 
             className={styles.linkButton}
             aria-label="Ver meu portfólio"
           >
