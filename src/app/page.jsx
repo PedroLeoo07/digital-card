@@ -49,7 +49,7 @@ export default function Home() {
           <div className={styles.profileImageWrapper}>
             <Image
               src="/image/landingPage.jpg"
-              alt="Leonardo Oliveira - Full Stack Developer"
+              alt="Foto profissional de Leonardo Oliveira, desenvolvedor Full Stack especializado em React, Next.js e Node.js"
               width={150}
               height={150}
               className={styles.profileImage}
@@ -67,37 +67,87 @@ export default function Home() {
         {/* Mini bio */}
         <div className={styles.bio}>
           <p>
-            Desenvolvedor focado em criar aplicações funcionais e intuitivas.
-            Experiência com desenvolvimento web e mobile.
+            Desenvolvedor Full Stack apaixonado por criar <strong>interfaces modernas</strong> e <strong>APIs performáticas</strong>. 
+            Trabalho com React, Next.js, Node.js e PostgreSQL, focando em entregar <strong>soluções eficientes</strong> e bem estruturadas. 
+            Experiência em desenvolvimento web e mobile, sempre buscando as melhores práticas e tecnologias atuais do mercado.
           </p>
+        </div>
+
+        {/* CTA Principal */}
+        <div className={styles.ctaSection}>
+          <a 
+            href="https://dev-leonardo-portfolio.vercel.app/" 
+            className={styles.ctaPrimary}
+            aria-label="Ver meus projetos no portfólio"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 22.08V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Ver Meus Projetos
+          </a>
+          <a 
+            href="mailto:leonardo.dev@email.com" 
+            className={styles.ctaSecondary}
+            aria-label="Entrar em contato por email"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Entrar em Contato
+          </a>
         </div>
 
         {/* Skills */}
         <div className={styles.skills}>
           <span className={styles.skill}>JavaScript</span>
+          <span className={styles.skill}>TypeScript</span>
           <span className={styles.skill}>React</span>
+          <span className={styles.skill}>Next.js</span>
           <span className={styles.skill}>React Native</span>
           <span className={styles.skill}>Node.js</span>
+          <span className={styles.skill}>Express</span>
+          <span className={styles.skill}>MongoDB</span>
+          <span className={styles.skill}>PostgreSQL</span>
+          <span className={styles.skill}>Git</span>
+          <span className={styles.skill}>Docker</span>
+          <span className={styles.skill}>REST API</span>
           <span className={styles.skill}>HTML/CSS</span>
+          <span className={styles.skill}>Tailwind CSS</span>
         </div>
 
-        {/* Botão Currículo */}
-        <a 
-          href="https://curriculo-online-three.vercel.app/" 
-          className={styles.resumeButton}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Ver meu currículo completo"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M10 9H9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          Ver Currículo Completo
-        </a>
+        {/* Seção de Contato */}
+        <div className={styles.contactSection}>
+          <h3 className={styles.sectionTitle}>Entre em Contato</h3>
+          <div className={styles.contactInfo}>
+            <a 
+              href="mailto:leonardo.dev@email.com" 
+              className={styles.contactItem}
+              aria-label="Enviar email para Leonardo Oliveira"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              leonardo.dev@email.com
+            </a>
+            <a 
+              href="https://curriculo-online-three.vercel.app/" 
+              className={styles.contactItem}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver currículo completo"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Download CV
+            </a>
+          </div>
+        </div>
 
         {/* Links principais */}
         <div className={styles.links}>
