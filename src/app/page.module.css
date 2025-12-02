@@ -202,6 +202,100 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.ctaPrimary:hover::before {
+  left: 100%;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
+}
+
+.ctaPrimary svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.ctaPrimary:hover svg {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.ctaSecondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.ctaSecondary svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.ctaSecondary:hover svg {
+  transform: scale(1.1);
+}
+
 /* Skills */
 .skills {
   display: flex;
@@ -209,7 +303,7 @@
   gap: 0.75rem;
   justify-content: center;
   margin-bottom: 2.5rem;
-  animation: fadeInUp 0.8s ease-out 0.8s both;
+  animation: fadeInUp 0.8s ease-out 0.9s both;
 }
 
 .skill {
@@ -221,53 +315,94 @@
   color: var(--text-secondary);
   font-weight: 500;
   transition: all 0.3s ease;
+  animation: fadeInScale 0.5s ease-out both;
 }
+
+.skill:nth-child(1) { animation-delay: 0.95s; }
+.skill:nth-child(2) { animation-delay: 1s; }
+.skill:nth-child(3) { animation-delay: 1.05s; }
+.skill:nth-child(4) { animation-delay: 1.1s; }
+.skill:nth-child(5) { animation-delay: 1.15s; }
+.skill:nth-child(6) { animation-delay: 1.2s; }
+.skill:nth-child(7) { animation-delay: 1.25s; }
+.skill:nth-child(8) { animation-delay: 1.3s; }
+.skill:nth-child(9) { animation-delay: 1.35s; }
+.skill:nth-child(10) { animation-delay: 1.4s; }
+.skill:nth-child(11) { animation-delay: 1.45s; }
+.skill:nth-child(12) { animation-delay: 1.5s; }
+.skill:nth-child(13) { animation-delay: 1.55s; }
+.skill:nth-child(14) { animation-delay: 1.6s; }
 
 .skill:hover {
   background: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
-/* Botão Currículo */
-.resumeButton {
-  display: inline-flex;
+/* Contact Section */
+.contactSection {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  animation: fadeInUp 0.8s ease-out 1.1s both;
+  transition: all 0.3s ease;
+}
+
+.contactSection:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(220, 38, 38, 0.15);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2rem;
-  margin-bottom: 2.5rem;
-  background: var(--primary-color);
-  color: white;
-  border: 2px solid var(--primary-color);
+  padding: 1rem 1.5rem;
+  background: var(--background);
+  border: 2px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
   font-family: 'Open Sans', sans-serif;
   transition: all 0.3s ease;
-  animation: fadeInUp 0.8s ease-out 1s both;
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
-.resumeButton svg {
-  width: 24px;
-  height: 24px;
+.contactItem svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
-.resumeButton:hover {
-  background: var(--primary-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+.contactItem:hover {
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
 }
 
-.resumeButton:hover svg {
-  transform: translateX(3px);
-}
-
-.resumeButton:active {
-  transform: translateY(-1px);
+.contactItem:hover svg {
+  transform: scale(1.2);
 }
 
 .quote {
@@ -429,9 +564,26 @@
     margin-bottom: 1.8rem;
   }
 
-  .resumeButton {
+  .ctaSection {
+    gap: 0.8rem;
+  }
+
+  .ctaPrimary {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .ctaSecondary {
     font-size: 0.95rem;
     padding: 0.9rem 1.5rem;
+  }
+
+  .contactSection {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
   }
 
   .skills {
@@ -486,11 +638,25 @@
     grid-template-columns: 1fr;
   }
 
-  .resumeButton {
+  .ctaPrimary,
+  .ctaSecondary {
     width: 100%;
     justify-content: center;
     font-size: 0.9rem;
-    padding: 0.85rem 1.25rem;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .contactSection {
+    padding: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .contactItem {
+    font-size: 0.85rem;
+    padding: 0.85rem 1rem;
   }
 
   .quote {
