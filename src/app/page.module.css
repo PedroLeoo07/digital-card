@@ -121,14 +121,9 @@
   margin: 0 auto;
 }
 
-.dark .profileImageWrapper {
-  background: linear-gradient(135deg, var(--primary), #000000, var(--accent));
+.profileImageWrapper {
+  background: linear-gradient(135deg, var(--primary), var(--accent), var(--bg));
   box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
-}
-
-.light .profileImageWrapper {
-  background: linear-gradient(135deg, var(--primary), #374151, var(--accent));
-  box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
 }
 
 .profileImage {
@@ -337,7 +332,7 @@
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text);
   margin: 0 0 1.5rem 0;
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -354,27 +349,27 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
-  background: var(--background);
+  background: var(--surface);
   border: 2px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
   transition: all 0.3s ease;
 }
 
 .contactItem svg {
-  color: var(--primary-color);
+  color: var(--primary);
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
 .contactItem:hover {
-  border-color: var(--primary-color);
-  color: var(--text-primary);
+  border-color: var(--primary);
+  color: var(--text);
   transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
 }
 
 .contactItem:hover svg {
@@ -386,7 +381,7 @@
   padding: 1.5rem;
   background: var(--surface);
   border-radius: 12px;
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--primary);
   animation: fadeInUp 0.8s ease-out 0.8s both;
   transition: all 0.3s ease;
 }
@@ -410,7 +405,7 @@
 .quote p {
   font-size: 1.2rem;
   font-style: italic;
-  color: var(--text-primary);
+  color: var(--text);
   margin: 0;
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
@@ -433,11 +428,11 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1.5rem 1rem;
-  background: var(--background);
+  background: var(--surface);
   border: 2px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--text);
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
   transition: all 0.3s ease;
@@ -446,14 +441,14 @@
 .linkButton svg {
   width: 32px;
   height: 32px;
-  color: var(--primary-color);
+  color: var(--primary);
   transition: transform 0.3s ease;
 }
 
 .linkButton:hover {
   transform: translateY(-4px);
-  border-color: var(--primary-color);
-  box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.35);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
 }
 
 .linkButton:hover svg {
