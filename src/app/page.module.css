@@ -26,7 +26,6 @@
   cursor: pointer;
   color: var(--text);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   z-index: 100;
   animation: slideInFromTop 0.6s ease-out 0.5s both;
 }
@@ -66,7 +65,6 @@
   max-width: 600px;
   width: 100%;
   background: var(--surface);
-  backdrop-filter: blur(10px);
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
