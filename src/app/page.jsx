@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     // Verifica se há preferência salva no localStorage
@@ -18,13 +18,23 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    // Aplica o tema ao document
+    if (isDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  }, [isDarkMode]);
+
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
     setIsDarkMode(newTheme);
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
+  
   return (
-    <div className={`${styles.page} ${isDarkMode ? styles.dark : styles.light}`}>
+    <div className={styles.page}>
       {/* Toggle de modo claro/escuro */}
       <button 
         className={styles.themeToggle}

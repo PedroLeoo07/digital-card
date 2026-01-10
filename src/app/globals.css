@@ -1,3 +1,25 @@
+:root {
+  /* 🌞 Tema Claro – Professional Tech */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --text: #0F172A;
+  --text-muted: #475569;
+  --primary: #2563EB;
+  --accent: #38BDF8;
+  --border: #E2E8F0;
+}
+
+[data-theme="dark"] {
+  /* 🌙 Tema Dark – Modern Tech */
+  --bg: #020617;
+  --surface: #0F172A;
+  --text: #E5E7EB;
+  --text-muted: #94A3B8;
+  --primary: #38BDF8;
+  --accent: #2563EB;
+  --border: #1E293B;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +29,9 @@ html, body {
   padding: 0;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
