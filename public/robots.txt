@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dev-leonardo-portfolio.vercel.app/sitemap.xml
+
+# Otimizações
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Bloquear arquivos desnecessários
+Disallow: /api/
+Disallow: /_next/static/
