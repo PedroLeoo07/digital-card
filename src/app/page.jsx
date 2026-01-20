@@ -78,11 +78,29 @@ export default function Home() {
   
   return (
     <div className={styles.page}>
+      {/* Contador de Visitas */}
+      <div className={styles.visitorCounter}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span>{visitorCount.toLocaleString(language === 'pt' ? 'pt-BR' : 'en-US')}</span>
+      </div>
+
+      {/* Toggle de idioma */}
+      <button 
+        className={styles.languageToggle}
+        onClick={toggleLanguage}
+        aria-label={t.aria.switchLanguage}
+      >
+        {language === 'pt' ? '🇺🇸 EN' : '🇧🇷 PT'}
+      </button>
+
       {/* Toggle de modo claro/escuro */}
       <button 
         className={styles.themeToggle}
         onClick={toggleTheme}
-        aria-label={isDarkMode ? "Ativar modo claro" : "Ativar modo escuro"}
+        aria-label={isDarkMode ? t.aria.lightMode : t.aria.darkMode}
       >
         {isDarkMode ? (
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,6 +125,8 @@ export default function Home() {
               height={150}
               className={styles.profileImage}
               priority
+              loading="eager"
+              quality={90}
             />
           </div>
         </div>
