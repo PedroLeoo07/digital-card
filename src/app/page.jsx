@@ -151,25 +151,25 @@ export default function Home() {
           <a 
             href="https://dev-leonardo-portfolio.vercel.app/" 
             className={styles.ctaPrimary}
-            aria-label="Ver meus projetos no portfólio"
+            aria-label={t.aria.viewProjects}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M12 22.08V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            Ver Meus Projetos
+            {t.buttons.viewProjects}
           </a>
           <a 
             href="mailto:leonardo.dev@email.com" 
             className={styles.ctaSecondary}
-            aria-label="Entrar em contato por email"
+            aria-label={t.aria.sendEmail}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            Entrar em Contato
+            {t.buttons.contact}
           </a>
         </div>
 
@@ -193,12 +193,12 @@ export default function Home() {
 
         {/* Seção de Contato */}
         <div className={styles.contactSection}>
-          <h3 className={styles.sectionTitle}>Entre em Contato</h3>
+          <h3 className={styles.sectionTitle}>{t.sections.contact}</h3>
           <div className={styles.contactInfo}>
             <a 
               href="mailto:leonardo.dev@email.com" 
               className={styles.contactItem}
-              aria-label="Enviar email para Leonardo Oliveira"
+              aria-label={t.aria.sendEmail}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -211,13 +211,13 @@ export default function Home() {
               className={styles.contactItem}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Ver currículo completo"
+              aria-label={t.aria.viewResume}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              Currículo Completo
+              {t.buttons.resume}
             </a>
           </div>
         </div>
@@ -227,12 +227,12 @@ export default function Home() {
           <a 
             href="https://dev-leonardo-portfolio.vercel.app/" 
             className={styles.linkButton}
-            aria-label="Ver meu portfólio"
+            aria-label={t.aria.viewPortfolio}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 6H16L14 4H10L8 6H4C2.9 6 2 6.9 2 8V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            Portfólio
+            {t.buttons.portfolio}
           </a>
 
           <a 
@@ -240,7 +240,7 @@ export default function Home() {
             className={styles.linkButton}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Conectar no LinkedIn"
+            aria-label={t.aria.connectLinkedIn}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -255,7 +255,7 @@ export default function Home() {
             className={styles.linkButton}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Ver meus projetos no GitHub"
+            aria-label={t.aria.viewGitHub}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 19C4 20.5 4 16.5 2 16M22 16V19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H16C15.4696 21 14.9609 20.7893 14.5858 20.4142C14.2107 20.0391 14 19.5304 14 19V16.13C14.0375 15.6532 13.9731 15.1738 13.811 14.7238C13.6489 14.2738 13.3929 13.8634 13.06 13.52C16.2 13.17 19.5 11.93 19.5 6.52C19.4997 5.12383 18.9627 3.7812 18 2.77C18.4559 1.54851 18.4236 0.196583 17.91 -0.999996C17.91 -0.999996 16.73 -1.35 14 0.599996C11.708 0.0499965 9.292 0.0499965 7 0.599996C4.27 -1.35 3.09 -0.999996 3.09 -0.999996C2.57638 0.196583 2.54414 1.54851 3 2.77C2.03013 3.78866 1.49252 5.14087 1.5 6.55C1.5 11.92 4.8 13.16 7.94 13.51C7.611 13.851 7.35726 14.2608 7.19531 14.7104C7.03335 15.1601 6.96681 15.6393 7 16.12V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
