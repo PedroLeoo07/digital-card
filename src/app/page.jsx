@@ -71,13 +71,13 @@ export default function Home() {
         {/* Header com nome e título */}
         <div className={styles.header}>
           <h1 className={styles.name}>Leonardo Oliveira</h1>
-          <h2 className={styles.title}>Full Stack Developer</h2>
+          <h2 className={styles.title}>Full Stack Developer | Estudante de Engenharia de Software</h2>
         </div>
 
         {/* Mini bio */}
         <div className={styles.bio}>
           <p>
-            Desenvolvedor Full Stack apaixonado por criar <strong>interfaces modernas</strong> e <strong>APIs performáticas</strong>. 
+            Estudante de <strong>Engenharia de Software</strong> e desenvolvedor Full Stack apaixonado por criar <strong>interfaces modernas</strong> e <strong>APIs performáticas</strong>. 
             Trabalho com React, Next.js, Node.js e PostgreSQL, focando em entregar <strong>soluções eficientes</strong> e bem estruturadas. 
             Experiência em desenvolvimento web e mobile, sempre buscando as melhores práticas e tecnologias atuais do mercado.
           </p>
