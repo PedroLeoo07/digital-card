@@ -134,15 +134,15 @@ export default function Home() {
         {/* Header com nome e título */}
         <div className={styles.header}>
           <h1 className={styles.name}>Leonardo Oliveira</h1>
-          <h2 className={styles.title}>Full Stack Developer | Estudante de Engenharia de Software</h2>
+          <h2 className={styles.title}>{t.title}</h2>
         </div>
 
         {/* Mini bio */}
         <div className={styles.bio}>
           <p>
-            Estudante de <strong>Engenharia de Software</strong> e desenvolvedor Full Stack apaixonado por criar <strong>interfaces modernas</strong> e <strong>APIs performáticas</strong>. 
-            Trabalho com React, Next.js, Node.js e PostgreSQL, focando em entregar <strong>soluções eficientes</strong> e bem estruturadas. 
-            Experiência em desenvolvimento web e mobile, sempre buscando as melhores práticas e tecnologias atuais do mercado.
+            {t.bio.part1 && <>{t.bio.part1} </>}
+            <strong>{t.bio.highlight1}</strong> {t.bio.part2} <strong>{t.bio.highlight2}</strong> {t.bio.part3} <strong>{t.bio.highlight3}</strong>
+            {t.bio.part4} <strong>{t.bio.highlight4}</strong> {t.bio.part5}
           </p>
         </div>
 
