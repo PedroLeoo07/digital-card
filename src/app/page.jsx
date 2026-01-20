@@ -3,11 +3,19 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
+import { translations } from "./translations";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [language, setLanguage] = useState("pt");
+  const [visitorCount, setVisitorCount] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  const t = translations[language];
 
   useEffect(() => {
+    setMounted(true);
+    
     // Verifica se há preferência salva no localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -15,6 +23,31 @@ export default function Home() {
     } else {
       // Usa a preferência do sistema
       setIsDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+
+    // Carrega idioma salvo
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+
+    // Sistema de contador de visitas
+    const VISITOR_KEY = 'digital_card_visitor_count';
+    const LAST_VISIT_KEY = 'digital_card_last_visit';
+    const currentTime = new Date().getTime();
+    const lastVisit = localStorage.getItem(LAST_VISIT_KEY);
+    
+    // Considera uma nova visita se passou mais de 1 hora desde a última
+    const ONE_HOUR = 60 * 60 * 1000;
+    
+    if (!lastVisit || (currentTime - parseInt(lastVisit)) > ONE_HOUR) {
+      const currentCount = parseInt(localStorage.getItem(VISITOR_KEY) || '0');
+      const newCount = currentCount + 1;
+      localStorage.setItem(VISITOR_KEY, newCount.toString());
+      localStorage.setItem(LAST_VISIT_KEY, currentTime.toString());
+      setVisitorCount(newCount);
+    } else {
+      setVisitorCount(parseInt(localStorage.getItem(VISITOR_KEY) || '0'));
     }
   }, []);
 
@@ -32,6 +65,16 @@ export default function Home() {
     setIsDarkMode(newTheme);
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
+
+  const toggleLanguage = () => {
+    const newLanguage = language === 'pt' ? 'en' : 'pt';
+    setLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage);
+  };
+
+  if (!mounted) {
+    return null; // Evita flash de conteúdo não hidratado
+  }
   
   return (
     <div className={styles.page}>
