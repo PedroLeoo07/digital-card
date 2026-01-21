@@ -103,12 +103,35 @@ export default function Home() {
     e.preventDefault();
     setFormStatus('sending');
     
-    // Simulando envio (você pode integrar com um backend ou serviço de email)
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setFormStatus('idle'), 3000);
-    }, 1500);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/leonardopedrodeoliveira07@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `Digital Card - ${formData.subject}`,
+          _template: 'table'
+        })
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setFormStatus('idle'), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
   };
 
   if (!mounted) {
@@ -305,6 +328,9 @@ export default function Home() {
         <div className={`${styles.contactFormSection} ${styles.fadeInSection}`}>
           <h3 className={styles.sectionTitle}>{t.sections.contactForm}</h3>
           <form onSubmit={handleFormSubmit} className={styles.contactForm}>
+            {/* Campos hidden para configuração do FormSubmit */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="false" />
             <div className={styles.formRow}>
               <input
                 type="text"
