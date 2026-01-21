@@ -273,6 +273,181 @@ export default function Home() {
           <span className={styles.skill}>Tailwind CSS</span>
         </div>
 
+        {/* Estatísticas */}
+        <div ref={statsRef} className={`${styles.statsSection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.sections.stats}</h3>
+          <div className={styles.statsGrid}>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>{stats.experience}+</div>
+              <div className={styles.statLabel}>{t.stats.experience}</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>{stats.projects}+</div>
+              <div className={styles.statLabel}>{t.stats.projects}</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>{stats.technologies}+</div>
+              <div className={styles.statLabel}>{t.stats.technologies}</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>{stats.contributions}+</div>
+              <div className={styles.statLabel}>{t.stats.contributions}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Disponibilidade */}
+        <div className={`${styles.availabilitySection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.availability.title}</h3>
+          <div className={styles.availabilityCard}>
+            <div className={styles.availabilityStatus}>
+              <span className={styles.statusDot}></span>
+              {t.availability.status}
+            </div>
+            <p className={styles.availabilityTypes}>{t.availability.types}</p>
+            <div className={styles.workPreferences}>
+              <span className={styles.workBadge}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 12H22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                {t.availability.remote}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Localização */}
+        <div className={`${styles.locationSection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.sections.location}</h3>
+          <div className={styles.locationCard}>
+            <div className={styles.locationItem}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>{t.location.city}</span>
+            </div>
+            <div className={styles.locationItem}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              <span>{t.location.timezone}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Certificações */}
+        <div className={`${styles.certificationsSection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.sections.certifications}</h3>
+          <div className={styles.certificationsList}>
+            <div className={styles.certBadge}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              {t.certifications.cert1}
+            </div>
+            <div className={styles.certBadge}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              {t.certifications.cert2}
+            </div>
+            <div className={styles.certBadge}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              {t.certifications.cert3}
+            </div>
+          </div>
+        </div>
+
+        {/* Depoimentos */}
+        <div className={`${styles.testimonialsSection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.sections.testimonials}</h3>
+          <div className={styles.testimonialsGrid}>
+            <div className={styles.testimonialCard}>
+              <div className={styles.quoteIcon}>"</div>
+              <p className={styles.testimonialText}>{t.testimonials.testimonial1.text}</p>
+              <div className={styles.testimonialAuthor}>
+                <strong>{t.testimonials.testimonial1.author}</strong>
+                <span>{t.testimonials.testimonial1.role}</span>
+              </div>
+            </div>
+            <div className={styles.testimonialCard}>
+              <div className={styles.quoteIcon}>"</div>
+              <p className={styles.testimonialText}>{t.testimonials.testimonial2.text}</p>
+              <div className={styles.testimonialAuthor}>
+                <strong>{t.testimonials.testimonial2.author}</strong>
+                <span>{t.testimonials.testimonial2.role}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Formulário de Contato */}
+        <div className={`${styles.contactFormSection} ${styles.fadeInSection}`}>
+          <h3 className={styles.sectionTitle}>{t.sections.contactForm}</h3>
+          <form onSubmit={handleFormSubmit} className={styles.contactForm}>
+            <div className={styles.formRow}>
+              <input
+                type="text"
+                name="name"
+                placeholder={t.form.name}
+                value={formData.name}
+                onChange={handleFormChange}
+                required
+                className={styles.formInput}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder={t.form.email}
+                value={formData.email}
+                onChange={handleFormChange}
+                required
+                className={styles.formInput}
+              />
+            </div>
+            <input
+              type="text"
+              name="subject"
+              placeholder={t.form.subject}
+              value={formData.subject}
+              onChange={handleFormChange}
+              required
+              className={styles.formInput}
+            />
+            <textarea
+              name="message"
+              placeholder={t.form.message}
+              value={formData.message}
+              onChange={handleFormChange}
+              required
+              rows="5"
+              className={styles.formTextarea}
+            />
+            <button 
+              type="submit" 
+              className={styles.formButton}
+              disabled={formStatus === 'sending'}
+            >
+              {formStatus === 'sending' ? t.form.sending : t.form.send}
+            </button>
+            {formStatus === 'success' && (
+              <div className={styles.formSuccess}>{t.form.success}</div>
+            )}
+            {formStatus === 'error' && (
+              <div className={styles.formError}>{t.form.error}</div>
+            )}
+          </form>
+        </div>
+
         {/* Seção de Contato */}
         <div className={styles.contactSection}>
           <h3 className={styles.sectionTitle}>{t.sections.contact}</h3>
@@ -348,6 +523,30 @@ export default function Home() {
       
         </div>
       </main>
+
+      {/* Botão WhatsApp Flutuante */}
+      <a 
+        href="https://wa.me/5511999999999" 
+        className={styles.whatsappButton}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t.aria.whatsapp}
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382C17.015 14.156 14.786 13.065 14.374 12.916C13.962 12.766 13.661 12.692 13.36 13.149C13.059 13.605 12.179 14.627 11.915 14.928C11.652 15.229 11.388 15.267 10.931 15.041C10.474 14.815 8.986 14.315 7.241 12.762C5.878 11.548 4.97 10.045 4.706 9.588C4.443 9.131 4.679 8.886 4.904 8.662C5.107 8.458 5.361 8.135 5.587 7.872C5.813 7.608 5.887 7.42 6.037 7.119C6.187 6.818 6.112 6.555 6 6.329C5.887 6.103 4.97 3.874 4.596 2.959C4.222 2.045 3.848 2.158 3.585 2.158C3.321 2.158 3.02 2.158 2.719 2.158C2.418 2.158 1.923 2.271 1.511 2.728C1.099 3.185 0 4.276 0 6.505C0 8.734 1.548 10.889 1.774 11.19C2 11.491 4.97 15.754 9.461 17.72C10.524 18.182 11.35 18.443 11.995 18.631C13.058 18.968 14.009 18.93 14.76 18.817C15.586 18.704 17.397 17.758 17.771 16.738C18.145 15.718 18.145 14.85 18.033 14.662C17.92 14.474 17.619 14.362 17.162 14.136" fill="currentColor"/>
+          <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0C5.463 0 0.104 5.359 0.104 11.941C0.104 14.031 0.674 16.084 1.754 17.876L0 24L6.276 22.273C8.001 23.239 9.978 23.754 12.045 23.754C18.627 23.754 24 18.395 24 11.813C24 8.618 22.755 5.618 20.52 3.449ZM12.045 21.754C10.204 21.754 8.401 21.239 6.826 20.273L6.451 20.048L2.79 21.023L3.765 17.438L3.502 17.063C2.437 15.425 1.874 13.522 1.874 11.554C1.874 6.555 5.985 2.444 10.984 2.444C13.404 2.444 15.704 3.334 17.434 5.064C19.164 6.794 20.054 9.094 20.054 11.514C20.117 16.513 16.006 20.624 12.007 20.624" fill="currentColor"/>
+        </svg>
+      </a>
+
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p>© 2026 Leonardo Oliveira. {t.footer.rights}.</p>
+          <p className={styles.footerMade}>
+            {t.footer.madeWith} <span className={styles.heart}>❤️</span> {t.footer.by} Leonardo
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
