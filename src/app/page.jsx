@@ -230,29 +230,6 @@ export default function Home() {
           <span className={styles.skill}>Tailwind CSS</span>
         </div>
 
-        {/* Estatísticas */}
-        <div ref={statsRef} className={`${styles.statsSection} ${styles.fadeInSection}`}>
-          <h3 className={styles.sectionTitle}>{t.sections.stats}</h3>
-          <div className={styles.statsGrid}>
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>{stats.experience}+</div>
-              <div className={styles.statLabel}>{t.stats.experience}</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>{stats.projects}+</div>
-              <div className={styles.statLabel}>{t.stats.projects}</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>{stats.technologies}+</div>
-              <div className={styles.statLabel}>{t.stats.technologies}</div>
-            </div>
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>{stats.contributions}+</div>
-              <div className={styles.statLabel}>{t.stats.contributions}</div>
-            </div>
-          </div>
-        </div>
-
         {/* Disponibilidade */}
         <div className={`${styles.availabilitySection} ${styles.fadeInSection}`}>
           <h3 className={styles.sectionTitle}>{t.availability.title}</h3>
@@ -320,29 +297,6 @@ export default function Home() {
                 <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               {t.certifications.cert3}
-            </div>
-          </div>
-        </div>
-
-        {/* Depoimentos */}
-        <div className={`${styles.testimonialsSection} ${styles.fadeInSection}`}>
-          <h3 className={styles.sectionTitle}>{t.sections.testimonials}</h3>
-          <div className={styles.testimonialsGrid}>
-            <div className={styles.testimonialCard}>
-              <div className={styles.quoteIcon}>"</div>
-              <p className={styles.testimonialText}>{t.testimonials.testimonial1.text}</p>
-              <div className={styles.testimonialAuthor}>
-                <strong>{t.testimonials.testimonial1.author}</strong>
-                <span>{t.testimonials.testimonial1.role}</span>
-              </div>
-            </div>
-            <div className={styles.testimonialCard}>
-              <div className={styles.quoteIcon}>"</div>
-              <p className={styles.testimonialText}>{t.testimonials.testimonial2.text}</p>
-              <div className={styles.testimonialAuthor}>
-                <strong>{t.testimonials.testimonial2.author}</strong>
-                <span>{t.testimonials.testimonial2.role}</span>
-              </div>
             </div>
           </div>
         </div>
