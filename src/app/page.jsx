@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import { translations } from "./translations";
 
@@ -10,6 +10,11 @@ export default function Home() {
   const [language, setLanguage] = useState("pt");
   const [visitorCount, setVisitorCount] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formStatus, setFormStatus] = useState('idle'); // idle, sending, success, error
+  const [stats, setStats] = useState({ experience: 0, projects: 0, technologies: 0, contributions: 0 });
+  const statsRef = useRef(null);
+  const [hasAnimatedStats, setHasAnimatedStats] = useState(false);
 
   const t = translations[language];
 
@@ -51,6 +56,67 @@ export default function Home() {
     }
   }, []);
 
+  // Intersection Observer para animações ao scroll
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.visible);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll(`.${styles.fadeInSection}`);
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [mounted]);
+
+  // Animação de contagem para estatísticas
+  useEffect(() => {
+    if (!statsRef.current || hasAnimatedStats) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setHasAnimatedStats(true);
+        animateStats();
+      }
+    }, { threshold: 0.5 });
+
+    observer.observe(statsRef.current);
+    return () => observer.disconnect();
+  }, [hasAnimatedStats]);
+
+  const animateStats = () => {
+    const targets = { experience: 2, projects: 15, technologies: 14, contributions: 500 };
+    const duration = 2000;
+    const steps = 60;
+    const increment = duration / steps;
+
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      
+      setStats({
+        experience: Math.floor(targets.experience * progress),
+        projects: Math.floor(targets.projects * progress),
+        technologies: Math.floor(targets.technologies * progress),
+        contributions: Math.floor(targets.contributions * progress)
+      });
+
+      if (step >= steps) {
+        setStats(targets);
+        clearInterval(timer);
+      }
+    }, increment);
+  };
+
   useEffect(() => {
     // Aplica o tema ao document
     if (isDarkMode) {
@@ -70,6 +136,22 @@ export default function Home() {
     const newLanguage = language === 'pt' ? 'en' : 'pt';
     setLanguage(newLanguage);
     localStorage.setItem('language', newLanguage);
+  };
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus('sending');
+    
+    // Simulando envio (você pode integrar com um backend ou serviço de email)
+    setTimeout(() => {
+      setFormStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setFormStatus('idle'), 3000);
+    }, 1500);
   };
 
   if (!mounted) {
